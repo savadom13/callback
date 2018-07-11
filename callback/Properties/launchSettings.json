@@ -19,7 +19,7 @@
     "callback": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/values",
+      "launchUrl": "api/Callback",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
