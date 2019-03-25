@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using callback;
 using callback.Db;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
 namespace callback.Controllers
@@ -48,7 +49,7 @@ namespace callback.Controllers
             {
                 //list.AddRange(context.Callbacks.ToList());
 
-                var t = context.Callbacks.ToList();
+                var t = context.Callbacks.AsNoTracking().OrderByDescending(c => c.Id).Take(5).ToList();
                 ViewBag.Data = t;
             }
 
